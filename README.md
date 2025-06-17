@@ -12,7 +12,7 @@ Este arquivo contém os comandos necessários para configurar e executar o proje
 
 Certifique-se de que o PostgreSQL esteja rodando na porta **5434** com o usuário `postgres` e senha `2`, e que exista um banco de dados chamado `receitasapi`.
 
-**Observação:** As credenciais do banco de dados (host, porta, usuário, senha, nome do banco) estão configuradas diretamente nos arquivos `data-source.ts` e `data-source-cli.ts`. Para um ambiente de produção, é altamente recomendável usar variáveis de ambiente (e.g., um arquivo `.env`).
+**Observação:** As credenciais do banco de dados (host, porta, usuário, senha, nome do banco) estão configuradas diretamente nos arquivos `data-source.ts` e `data-source-cli.ts`.
 
 ## 3. Instalação de Dependências
 
