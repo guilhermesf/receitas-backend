@@ -1,0 +1,168 @@
+### Endpoints de Usuário (`/user`)
+
+*   **Criar Usuário:**
+    *   **Método:** `POST`
+    *   **URL:** `http://localhost:3000/user`
+    *   **Body (JSON):**
+        ```json
+        {
+          "name": "Nome do Usuário",
+          "email": "email@example.com",
+          "password": "senhaSegura123"
+        }
+        ```
+*   **Listar Todos os Usuários:**
+    *   **Método:** `GET`
+    *   **URL:** `http://localhost:3000/user`
+*   **Obter Usuário por ID:**
+    *   **Método:** `GET`
+    *   **URL:** `http://localhost:3000/user/:id` (substitua `:id` pelo ID do usuário)
+*   **Atualizar Usuário:**
+    *   **Método:** `PATCH`
+    *   **URL:** `http://localhost:3000/user/:id` (substitua `:id` pelo ID do usuário)
+    *   **Body (JSON - pode ser parcial):**
+        ```json
+        {
+          "name": "Novo Nome",
+          "email": "novo.email@example.com",
+          "password": "novaSenha"
+        }
+        ```
+*   **Deletar Usuário:**
+    *   **Método:** `DELETE`
+    *   **URL:** `http://localhost:3000/user/:id` (substitua `:id` pelo ID do usuário)
+
+---
+
+### Endpoints de Categoria (`/category`)
+
+*   **Criar Categoria:**
+    *   **Método:** `POST`
+    *   **URL:** `http://localhost:3000/category`
+    *   **Body (JSON):**
+        ```json
+        {
+          "name": "Sobremesas"
+        }
+        ```
+*   **Listar Todas as Categorias:**
+    *   **Método:** `GET`
+    *   **URL:** `http://localhost:3000/category`
+*   **Obter Categoria por ID:**
+    *   **Método:** `GET`
+    *   **URL:** `http://localhost:3000/category/:id` (substitua `:id` pelo ID da categoria)
+*   **Atualizar Categoria:**
+    *   **Método:** `PATCH`
+    *   **URL:** `http://localhost:3000/category/:id` (substitua `:id` pelo ID da categoria)
+    *   **Body (JSON):**
+        ```json
+        {
+          "name": "Doces e Bolos"
+        }
+        ```
+*   **Deletar Categoria:**
+    *   **Método:** `DELETE`
+    *   **URL:** `http://localhost:3000/category/:id` (substitua `:id` pelo ID da categoria)
+
+---
+
+### Endpoints de Ingrediente (`/ingredient`)
+
+*   **Criar Ingrediente:**
+    *   **Método:** `POST`
+    *   **URL:** `http://localhost:3000/ingredient`
+    *   **Body (JSON):**
+        ```json
+        {
+          "name": "Açúcar"
+        }
+        ```
+*   **Listar Todos os Ingredientes:**
+    *   **Método:** `GET`
+    *   **URL:** `http://localhost:3000/ingredient`
+*   **Obter Ingrediente por ID:**
+    *   **Método:** `GET`
+    *   **URL:** `http://localhost:3000/ingredient/:id` (substitua `:id` pelo ID do ingrediente)
+*   **Atualizar Ingrediente:**
+    *   **Método:** `PATCH`
+    *   **URL:** `http://localhost:3000/ingredient/:id` (substitua `:id` pelo ID do ingrediente)
+    *   **Body (JSON):**
+        ```json
+        {
+          "name": "Açúcar Refinado"
+        }
+        ```
+*   **Deletar Ingrediente:**
+    *   **Método:** `DELETE`
+    *   **URL:** `http://localhost:3000/ingredient/:id` (substitua `:id` pelo ID do ingrediente)
+
+---
+
+### Endpoints de Receita (`/recipe`)
+
+*   **Criar Receita:**
+    *   **Método:** `POST`
+    *   **URL:** `http://localhost:3000/recipe`
+    *   **Body (JSON):**
+        ```json
+        {
+          "title": "Bolo de Cenoura",
+          "description": "Um delicioso bolo de cenoura com cobertura de chocolate.",
+          "userId": 1,        // Substitua pelo ID de um usuário existente
+          "categoryId": 1,    // Substitua pelo ID de uma categoria existente
+          "ingredientIds": [1, 2, 3] // Substitua pelos IDs de ingredientes existentes
+        }
+        ```
+*   **Listar Todas as Receitas:**
+    *   **Método:** `GET`
+    *   **URL:** `http://localhost:3000/recipe`
+*   **Obter Receita por ID:**
+    *   **Método:** `GET`
+    *   **URL:** `http://localhost:3000/recipe/:id` (substitua `:id` pelo ID da receita)
+*   **Atualizar Receita:**
+    *   **Método:** `PATCH`
+    *   **URL:** `http://localhost:3000/recipe/:id` (substitua `:id` pelo ID da receita)
+    *   **Body (JSON - pode ser parcial):**
+        ```json
+        {
+          "title": "Bolo de Cenoura Perfeito",
+          "ingredientIds": [1, 4] // Para atualizar os ingredientes
+        }
+        ```
+*   **Deletar Receita:**
+    *   **Método:** `DELETE`
+    *   **URL:** `http://localhost:3000/recipe/:id` (substitua `:id` pelo ID da receita)
+
+---
+
+### Endpoints de Planejamento (`/planning`)
+
+*   **Criar Planejamento:**
+    *   **Método:** `POST`
+    *   **URL:** `http://localhost:3000/planning`
+    *   **Body (JSON):**
+        ```json
+        {
+          "date": "2024-12-25", // Formato YYYY-MM-DD
+          "userId": 1,           // Substitua pelo ID de um usuário existente
+          "recipeId": 1          // Substitua pelo ID de uma receita existente
+        }
+        ```
+*   **Listar Todos os Planejamentos:**
+    *   **Método:** `GET`
+    *   **URL:** `http://localhost:3000/planning`
+*   **Obter Planejamento por ID:**
+    *   **Método:** `GET`
+    *   **URL:** `http://localhost:3000/planning/:id` (substitua `:id` pelo ID do planejamento)
+*   **Atualizar Planejamento:**
+    *   **Método:** `PATCH`
+    *   **URL:** `http://localhost:3000/planning/:id` (substitua `:id` pelo ID do planejamento)
+    *   **Body (JSON - pode ser parcial):**
+        ```json
+        {
+          "date": "2024-12-31"
+        }
+        ```
+*   **Deletar Planejamento:**
+    *   **Método:** `DELETE`
+    *   **URL:** `http://localhost:3000/planning/:id` (substitua `:id` pelo ID do planejamento) 
